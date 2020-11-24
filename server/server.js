@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 //   useCreateIndex: true
 // });
 
-mongoose.connect('mongodb://localhost:27017/cafe', {
+mongoose.connect(process.env.urlDB, {
   useNewUrlParser: true,
   useCreateIndex: true,
   useFindAndModify: false,
