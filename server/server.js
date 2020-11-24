@@ -21,7 +21,12 @@ app.use(bodyParser.json());
 //   useCreateIndex: true
 // });
 
-mongoose.connect('mongodb://localhost:27017/cafe', { useNewUrlParser: true, useFindAndModify: false, useCreateIndex: true, useUnifiedTopology: true }, (err, res) => {
+mongoose.connect('mongodb://localhost:27017/cafe', {
+  useNewUrlParser: true,
+  useCreateIndex: true
+  //useFindAndModify: false,
+  //useUnifiedTopology: true
+}, (err, res) => {
   if (err) {
     throw err;
   }
