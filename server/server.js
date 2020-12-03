@@ -8,8 +8,8 @@ const bodyParser = require('body-parser');
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 
-//Importamos el archivo usuario.js para ser usado
-app.use(require('./routes/usuario'));
+//Configuración global de rutas
+app.use(require('./routes/index'));
 
 // parse application/json
 app.use(bodyParser.json());
